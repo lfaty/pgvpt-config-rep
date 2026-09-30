@@ -1,0 +1,19 @@
+server:
+  port: 8080 # Port standard pour une API Gateway
+
+eureka:
+  client:
+    # La Gateway doit s'enregistrer sur Eureka
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  cloud:
+    gateway:
+      # Active la création automatique de routes basées sur le nom des microservices inscrits dans Eureka
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-name: true # Permet d'appeler /mon-service au lieu de /MON-SERVICE
