@@ -1,13 +1,13 @@
 server:
-  port: 3001
+  port: 3006
   servlet:
     context-path: /api/v1
 
 spring:
   application:
-    name: ms-patrimoine
+    name: ms-contenu
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:patrimoine_db}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:contenu_db}
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:admin}
     driver-class-name: org.postgresql.Driver
